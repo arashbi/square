@@ -2,22 +2,15 @@
 
 /* Controllers */
 
-function LoginController($scope,$http) {
+function LoginController($scope,$http, login) {
 	$scope.login = function(){
-		alert("hello " + $scope.data.username + "/" + $scope.data.password);
-		$http.post("http://localhost:8000/blah",$scope.data)
-		.success(
-			function (data,status,headers,config){})
-		.error(
-			function (data,status,headers,config){
-				console.log(data);
-				console.log(status);
-				console.log(headers);
-				console.log(config);
-			});
-	};
+		var l = login($scope.data);
+		if(!l){
+			$scope.data.error="Login failed, please try again"
+		}
+	}
 }
-LoginController.$inject = ['$scope','$http'];
+LoginController.$inject = ['$scope','$http','login'];
 
 function MyCtrl1() {}
 MyCtrl1.$inject = [];
