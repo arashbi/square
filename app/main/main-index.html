@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app="main">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My AngularJS App</title>
-  <link rel="stylesheet" href="css/app.css"/>
-  <link rel="stylesheet" href="css/bootstrap.css"/>
-  <link href="css/bootstrap.css" rel="stylesheet"/>
-  <link href="css/bootstrap-responsive.css" rel="stylesheet"/>
-  <link href="css/angular-ui.css" rel="stylesheet"/>
+  <!-- <link rel="stylesheet" href="css/app.css"/> -->
+  <link rel="stylesheet" href="../css/bootstrap.css"/>
+  <link href="../css/bootstrap.css" rel="stylesheet"/>
+  <link href="../css/bootstrap-responsive.css" rel="stylesheet"/>
+  <link href="../css/angular-ui.css" rel="stylesheet"/>
    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -18,9 +18,9 @@
    <body data-spy="scroll" data-target=".bs-docs-sidebar">
     <!-- Navbar
     ================================================== -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar navbar-inverse">
       <div class="navbar-inner">
-        <div class="container">
+        <div class="container-fluid">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -64,15 +64,17 @@
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
   -->
-  <script src="lib/angular/angular.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/services.js"></script>
-  <script src="js/controllers.js"></script>
+  <script src="../lib/angular/angular.js"></script>
+  <script src="../lib/angular/angular-resource.js"></script>
+  <script src="../lib/angular/angular-loader.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/main-services.js"></script>
+  <script src="js/main-controllers.js"></script>
   <script src="js/filters.js"></script>
   <script src="js/directives.js"></script>
-  <script type="text/javascript" src="lib/jquery.js"></script>
-  <script type="text/javascript" src="lib/bootstrap-transition.js"></script>
-  <script type="text/javascript" src="lib/bootstrap-collapse.js"></script>
-  <script type="text/javascript" src="lib/angular-ui.js"></script>
+  <script type="text/javascript" src="../lib/jquery.js"></script>
+  <script type="text/javascript" src="../lib/bootstrap-transition.js"></script>
+  <script type="text/javascript" src="../lib/bootstrap-collapse.js"></script>
+  <script type="text/javascript" src="../lib/angular-ui.js"></script>
 </body>
 </html>

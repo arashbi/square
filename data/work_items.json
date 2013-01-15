@@ -1,0 +1,8 @@
+{
+	"name" : "List",
+	"workItems" : [
+		{"name" : " Work 1",
+		 "description" : "description of work 1"
+		}
+	]
+}

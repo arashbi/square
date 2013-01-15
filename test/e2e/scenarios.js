@@ -42,4 +42,15 @@ describe('my app', function() {
     });
 
   });
+  
+  describe('fetching from jira', function(fetchTask){
+    beforeEach(function(){
+      browser().navigateTo("main/#landing");
+    });
+
+    it("Should fetch information from jira", function (){
+      fetchTask();
+    });
+     
+  });
 });

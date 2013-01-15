@@ -11,4 +11,17 @@ describe('service', function() {
       expect(version).toEqual('0.1');
     }));
   });
+
+});
+
+describe('service', function() {
+  beforeEach(module('main.services'));
+
+
+  describe('fetchTasks', function() {
+    it('should return current version', inject(function(fetchTask) {
+      var task = fetchTask();
+    }));
+  });
+  
 });
