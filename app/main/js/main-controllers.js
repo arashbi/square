@@ -10,26 +10,28 @@ function LandingController($scope,$resource, fetchTasks) {
 		console.log(jsonp);
 	};
 	$scope.user={name: "Arash"};
-	// $scope.tasks=fetchTasks();
-			var tasksRequest = 
-			$resource("https://hd.univeris.com/rest/api/2/search?jql=assignee=currentUser()&os_username=abizhanzadeh&os_password=o0ldouzi&maxResults=5&jsonp-callback=JSON_CALLBACK",{},{get: {method:'JSONP'}, replies:{method:'JSONP'}});
-			
-		var response= tasksRequest.get({},function(){
-			$scope.issues = response.issues;
-			console.log($scope.issues);
-		});
-		// $scope.issues = response;
-		console.log("Resource call succeeded");
-		// console.log($scope.issues);
-		
+	fetchTasks.get({},function(tasks){
+		console.log(tasks);
+		$scope.issues = issues(tasks.issues);
+		console.log($scope.issues);
+	});		
 }
 
 
 LandingController.$inject = ['$scope','$resource','fetchTasks'];
 
-function MyCtrl1() {}
-MyCtrl1.$inject = [];
-
+function IssueController($scope,$resource,  $routeParams) {
+	var id = $routeParams.issueId;
+	console.log(id);
+	var r = $resource("https://hd.univeris.com/rest/api/2/issue/:resourceId?jsonp-callback=JSON_CALLBACK",{},{get: {method:'JSONP'}, replies:{method:'JSONP'}});
+	r.get({resourceId : id}, 
+		function(issue){
+			console.log(issue);
+			$scope.issue=issue.fields;
+			$scope.key=issue.key;
+		}	
+		);
+}
 
 function MyCtrl2() {
 }
