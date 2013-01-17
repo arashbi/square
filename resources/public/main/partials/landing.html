@@ -24,6 +24,9 @@
                 class="pad-right checklink checkall">Select All</a> <a href="#"
                 class="pad-right checklink checknone">Select None</a>
             </div>
+            <div class="pull-right">
+              <a href="#/create" id="create-issue" class="btn btn-mini">create</a>
+           </div>
           </div>
         </div>
         <div class="row-fluid" id="profiles"></div>
@@ -32,8 +35,8 @@
               <caption>Issues</caption>
               <thead>
                 <tr>
-                  <td><strong>Summary</strong></td>
                   <td><strong>Key</strong></td>
+                  <td><strong>Summary</strong></td>
               </thead>
               <tbody>
               <tr ng-repeat="issue in issues">

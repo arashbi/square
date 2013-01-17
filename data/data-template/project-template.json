@@ -1,0 +1,8 @@
+{ "name": "project",
+  "fields" : [
+  	{name: "name", type: "string"},
+  	{name: "description", type:"string"},
+  	{name: "start-date", type: "date"},
+  	{"name" : "lead", type: "string"},
+  ]
+}

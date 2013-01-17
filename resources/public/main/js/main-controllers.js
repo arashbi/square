@@ -33,6 +33,7 @@ function IssueController($scope,$resource,  $routeParams) {
 		);
 }
 
-function MyCtrl2() {
+function CreateIssueController($scope) {
+
 }
-MyCtrl2.$inject = [];
+

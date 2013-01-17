@@ -21,15 +21,6 @@ angular.module('main', ['main.filters', 'main.services', 'main.directives']).
     $routeProvider.when('/landing', {templateUrl: 'partials/landing.html', controller: LandingController});
     $routeProvider.when('/issue/:issueId',
     	 {templateUrl: 'partials/issue.html', controller: IssueController});
-  //   $routeProvider.otherwise(
-
-  //   	{redirectTo: 
-  //   		function(param, location){
-  //   			console.log(location);
-  //   			console.log( "routes is " + routs);
-  //   			if(location.match("issue/(.*")[1]!=null){
-  //   				return null;
-  //   			}
-  //   		}
-  //   	});
+    $routeProvider.when('/create', {templateUrl: 'partials/create.html', controller :CreateIssueController});
+    $routeProvider.otherwise({redirectTo: "/landing"});
    }]);

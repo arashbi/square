@@ -1,0 +1,6 @@
+{ name: "master-template",
+  fields: [
+  	{ name : "name", type: "string"}
+  	{name: "fields", type: "array"}
+  ]
+	}
