@@ -1,11 +1,24 @@
 <form class="form-horizontal">
-	<fieldset>
-		<legend>Create Issue</legend>
-		<div class="control-group">
-		<label for="description" class="control-label">Description:</label>
-		<div class="controls">
-			<input id="description" type="text" placeholder="Description of the issue ..."/>
-		</div>
-	</div>
-	</fieldset>
+  <fieldset>
+    <legend>Create Issue</legend>
+    <div class="control-group">
+      <label for="label"
+	     class="control-label">Label: </label>
+      <div class="controls">
+	<input id="label" type="text" placeholder="Label of ticket" ng-model="issue.label"/>
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="description" class="control-label">Description:</label>
+      <div class="controls">
+	<textarea id="description"  placeholder="Description of the
+						 issue ..."  ng-model="issue.description"></textarea>
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">	
+	<button class="btn btn-primary" type="button" ng-click="save()">Save</button>
+      </div>
+    </div>
+    </fieldset>
 </form>

@@ -33,7 +33,21 @@ function IssueController($scope,$resource,  $routeParams) {
 		);
 }
 
-function CreateIssueController($scope) {
-
+function CreateIssueController($http,$scope) {
+    $scope.save = function(){
+	console.log($scope.issue);
+	$http.put('/issue',$scope.issue,{}).
+	    success(function(data, status, headers, config) {
+		console.log('success' + status);
+		// this callback will be called asynchronously
+		// when the response is available
+	    }).
+	    error(function(data, status, headers, config) {
+		console.log("failed " + status);
+		// called asynchronously if an error occurs
+		// or server returns response with an error status.
+	    });
+    }
 }
+CreateIssueController.$inject = ['$http', '$scope'];
 
